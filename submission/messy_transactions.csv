@@ -1,0 +1,61 @@
+row_id,date,merchant,amount,currency
+R000,03/21/2025,Initech ,$153.07,USD 
+R001,2025-04-26,  Acme  Co ,2460.27,$
+R002,2025-03-15,  Acme  Co ,2140.88,usd
+R003,2025-04-13,Globex,N/A,USD 
+R004,2025-01-27,Globex,"$1,517.79",usd
+R005,"Mar 28, 2025",Globex,"$4,934.42",usd
+R006,04/25/2025,Initech ,"$1,894.67",USD
+R007,02/12/2025,Soylent,$ 18.73,USD 
+R008,02/09/2025,Initech ,3652.24,
+R009,2025-01-23,Initech ,N/A,USD
+R010,02/16/2025,Soylent,"($2,375.09)",USD
+R011,2025-01-26,Globex,"$ 1,806.55",
+R012,2025-03-01,Soylent,4508.27,$
+R013,2025-01-12,Initech ,"$3,203.49",USD 
+R014,"Apr 29, 2025",Soylent,1639.13,USD
+R015,"Jan 11, 2025",Globex,N/A,$
+R016,03/10/2025,  Acme  Co ,3883.65,usd
+R017,2025-02-23,  Acme  Co ,N/A,USD
+R018,not-a-date, Umbrella   Corp,$886.10,USD
+R019,01/19/2025,Soylent,2738.80,usd
+R020,02/10/2025,Initech ,N/A,$
+R021,2025-03-10, Umbrella   Corp,($945.34),$
+R022,"Apr 11, 2025",Soylent,331.87,$
+R023,2025-03-26,Initech ,2933.41,$
+R024,"Feb 03, 2025",Initech ,"($3,407.25)",$
+R025,"Mar 02, 2025",Initech ,3522.34,$
+R026,"Mar 24, 2025",Initech ,"$ 1,436.89",$
+R027,02/22/2025,Globex,N/A,
+R028,01/26/2025, Umbrella   Corp,"($3,626.06)",$
+R029,2025-02-23,Soylent,2708.71,USD 
+R030,"Mar 12, 2025",Initech ,"($1,026.50)",USD
+R031,2025-03-25,Globex,3308.55,usd
+R032,2025-01-22,Globex,1664.83,USD
+R033,01/05/2025, Umbrella   Corp,"$1,994.86",$
+R034,"Jan 31, 2025",Initech ,1838.73,USD
+R035,2025-04-21,Soylent,N/A,$
+R036,"Feb 13, 2025",Initech ,"($4,292.41)",$
+R037,"Mar 14, 2025",Soylent,"($2,451.90)",$
+R038,03/14/2025,Globex,"($3,191.86)",usd
+R039,2025-03-26, Umbrella   Corp,"$ 1,710.39",USD
+R040,"Feb 11, 2025",Soylent,"$2,251.24",
+R041,"Mar 03, 2025", Umbrella   Corp,"$ 4,483.47",
+R042,04/05/2025, Umbrella   Corp,"($2,179.37)",$
+R043,02/09/2025,Initech ,"($2,501.51)",usd
+R044,2025-02-26,Initech ,"($4,099.39)",USD
+R045,"Mar 03, 2025",Soylent,"$1,277.49",$
+R046,2025-02-04,Initech ,2581.88,$
+R047,"Apr 21, 2025",  Acme  Co ,"($3,987.67)",USD
+R048,04/01/2025,Soylent,3834.99,$
+R049,"Mar 29, 2025",Soylent,($191.99),usd
+R050,2025-03-29,Soylent,77.33,usd
+R051,"Mar 30, 2025", Umbrella   Corp,"$ 2,495.14",
+R052,02/07/2025,  Acme  Co ,"($4,385.50)",$
+R053,03/16/2025, Umbrella   Corp,($749.07),$
+R054,04/24/2025,Initech ,$ 805.92,USD 
+R055,"Jan 09, 2025",Globex,N/A,$
+R056,not-a-date, Umbrella   Corp,"$2,125.72",USD
+R057,"Mar 20, 2025",  Acme  Co ,N/A,usd
+R058,not-a-date,  Acme  Co ,"($1,118.46)",USD 
+R059,01/10/2025,  Acme  Co ,"($3,016.99)",USD 
