@@ -1,0 +1,139 @@
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - RUN_START - Started execution of run for "customer_orders_job".
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - ENGINE_EVENT - Executing steps in process (pid: 8)
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - RESOURCE_INIT_STARTED - Starting initialization of resources [io_manager].
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - RESOURCE_INIT_SUCCESS - Finished initialization of resources [io_manager].
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - LOGS_CAPTURED - Capturing logs for process (pid: 8).
+2026-09-13 10:44:44 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_run_op - STEP_START - Started execution of step "dbt_run_op".
+2026-09-13 10:44:44 +0000 - dagster - INFO - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - dbt_run_op - Running: dbt run --project-dir /opt/dagster/app --profiles-dir /opt/dagster/app
+[0m10:44:45  Running with dbt=1.12.4
+[0m10:44:45  Registered adapter: postgres=1.11.0
+[0m10:44:46  Found 4 models, 18 data tests, 3 sources, 477 macros
+[0m10:44:46  
+[0m10:44:46  Concurrency: 4 threads (target='dev')
+[0m10:44:46  
+[0m10:44:46  1 of 4 START sql view model public.stg_customers ............................... [RUN]
+[0m10:44:46  2 of 4 START sql incremental model public.stg_orders ........................... [RUN]
+[0m10:44:46  3 of 4 START sql view model public.stg_payments ................................ [RUN]
+[0m10:44:46  3 of 4 OK created sql view model public.stg_payments ........................... [[32mCREATE VIEW[0m in 0.16s]
+[0m10:44:46  1 of 4 OK created sql view model public.stg_customers .......................... [[32mCREATE VIEW[0m in 0.16s]
+[0m10:44:46  2 of 4 OK created sql incremental model public.stg_orders ...................... [[32mINSERT 0 0[0m in 0.17s]
+[0m10:44:46  4 of 4 START sql table model public.customer_orders ............................ [RUN]
+[0m10:44:46  4 of 4 OK created sql table model public.customer_orders ....................... [[32mSELECT 400[0m in 0.04s]
+[0m10:44:46  
+[0m10:44:46  Finished running 1 incremental model, 1 table model, 2 view models in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m10:44:46  
+[0m10:44:46  [32mCompleted successfully[0m
+[0m10:44:46  
+[0m10:44:46  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+2026-09-13 10:44:47 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_run_op - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
+2026-09-13 10:44:47 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_run_op - STEP_SUCCESS - Finished execution of step "dbt_run_op" in 2.59s.
+2026-09-13 10:44:47 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_test_op - STEP_START - Started execution of step "dbt_test_op".
+2026-09-13 10:44:47 +0000 - dagster - INFO - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - dbt_test_op - Running: dbt test --project-dir /opt/dagster/app --profiles-dir /opt/dagster/app
+[0m10:44:48  Running with dbt=1.12.4
+[0m10:44:48  Registered adapter: postgres=1.11.0
+[0m10:44:48  Found 4 models, 18 data tests, 3 sources, 477 macros
+[0m10:44:48  
+[0m10:44:48  Concurrency: 4 threads (target='dev')
+[0m10:44:48  
+[0m10:44:48  1 of 18 START test accepted_values_stg_orders_status__completed__shipped__placed__returned  [RUN]
+[0m10:44:48  2 of 18 START test not_null_customer_orders_customer_id ........................ [RUN]
+[0m10:44:48  3 of 18 START test not_null_customer_orders_customer_name ...................... [RUN]
+[0m10:44:48  4 of 18 START test not_null_customer_orders_first_order_date ................... [RUN]
+[0m10:44:48  2 of 18 PASS not_null_customer_orders_customer_id .............................. [[32mPASS[0m in 0.07s]
+[0m10:44:48  1 of 18 PASS accepted_values_stg_orders_status__completed__shipped__placed__returned  [[32mPASS[0m in 0.07s]
+[0m10:44:48  4 of 18 PASS not_null_customer_orders_first_order_date ......................... [[32mPASS[0m in 0.07s]
+[0m10:44:48  3 of 18 PASS not_null_customer_orders_customer_name ............................ [[32mPASS[0m in 0.07s]
+[0m10:44:48  5 of 18 START test not_null_customer_orders_most_recent_order_date ............. [RUN]
+[0m10:44:48  6 of 18 START test not_null_customer_orders_n_orders ........................... [RUN]
+[0m10:44:48  7 of 18 START test not_null_customer_orders_total_amount ....................... [RUN]
+[0m10:44:48  8 of 18 START test not_null_stg_customers_customer_id .......................... [RUN]
+[0m10:44:48  5 of 18 PASS not_null_customer_orders_most_recent_order_date ................... [[32mPASS[0m in 0.03s]
+[0m10:44:48  9 of 18 START test not_null_stg_orders_customer_id ............................. [RUN]
+[0m10:44:48  8 of 18 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.03s]
+[0m10:44:48  6 of 18 PASS not_null_customer_orders_n_orders ................................. [[32mPASS[0m in 0.04s]
+[0m10:44:48  7 of 18 PASS not_null_customer_orders_total_amount ............................. [[32mPASS[0m in 0.04s]
+[0m10:44:48  10 of 18 START test not_null_stg_orders_order_id ............................... [RUN]
+[0m10:44:48  11 of 18 START test not_null_stg_payments_order_id ............................. [RUN]
+[0m10:44:48  12 of 18 START test not_null_stg_payments_payment_id ........................... [RUN]
+[0m10:44:48  9 of 18 PASS not_null_stg_orders_customer_id ................................... [[32mPASS[0m in 0.03s]
+[0m10:44:48  13 of 18 START test relationships_stg_orders_customer_id__customer_id__ref_stg_customers_  [RUN]
+[0m10:44:48  10 of 18 PASS not_null_stg_orders_order_id ..................................... [[32mPASS[0m in 0.04s]
+[0m10:44:48  11 of 18 PASS not_null_stg_payments_order_id ................................... [[32mPASS[0m in 0.04s]
+[0m10:44:48  12 of 18 PASS not_null_stg_payments_payment_id ................................. [[32mPASS[0m in 0.04s]
+[0m10:44:48  14 of 18 START test relationships_stg_payments_order_id__order_id__ref_stg_orders_  [RUN]
+[0m10:44:48  15 of 18 START test unique_customer_orders_customer_id ......................... [RUN]
+[0m10:44:48  16 of 18 START test unique_stg_customers_customer_id ........................... [RUN]
+[0m10:44:48  13 of 18 PASS relationships_stg_orders_customer_id__customer_id__ref_stg_customers_  [[32mPASS[0m in 0.04s]
+[0m10:44:48  17 of 18 START test unique_stg_orders_order_id ................................. [RUN]
+[0m10:44:48  16 of 18 PASS unique_stg_customers_customer_id ................................. [[32mPASS[0m in 0.03s]
+[0m10:44:48  14 of 18 PASS relationships_stg_payments_order_id__order_id__ref_stg_orders_ ... [[32mPASS[0m in 0.04s]
+[0m10:44:48  15 of 18 PASS unique_customer_orders_customer_id ............................... [[32mPASS[0m in 0.04s]
+[0m10:44:48  18 of 18 START test unique_stg_payments_payment_id ............................. [RUN]
+[0m10:44:48  17 of 18 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.02s]
+[0m10:44:48  18 of 18 PASS unique_stg_payments_payment_id ................................... [[32mPASS[0m in 0.01s]
+[0m10:44:48  
+[0m10:44:48  Finished running 18 data tests in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[0m10:44:48  
+[0m10:44:48  [32mCompleted successfully[0m
+[0m10:44:48  
+[0m10:44:48  Done. PASS=18 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=18
+2026-09-13 10:44:49 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_test_op - STEP_OUTPUT - Yielded output "result" of type "Nothing". (Type check passed).
+2026-09-13 10:44:49 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - dbt_test_op - STEP_SUCCESS - Finished execution of step "dbt_test_op" in 2.28s.
+2026-09-13 10:44:49 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - STEP_START - Started execution of step "flaky_op".
+2026-09-13 10:44:49 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - STEP_UP_FOR_RETRY - Execution of step "flaky_op" failed and has requested a retry in 2 seconds.
+
+dagster._core.execution.plan.utils.RetryRequestedFromPolicy
+
+Stack Trace:
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/execute_plan.py", line 243, in dagster_event_sequence_for_step
+    yield from check.generator(step_events)
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/execute_step.py", line 505, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/execute_step.py", line 184, in _step_output_error_checked_user_event_sequence
+    for user_event in user_event_sequence:
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/execute_step.py", line 88, in _process_asset_results_to_events
+    for user_event in user_event_sequence:
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/compute.py", line 188, in execute_core_compute
+    for step_output in _yield_compute_results(step_context, inputs, compute_fn, compute_context):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/compute.py", line 157, in _yield_compute_results
+    for event in iterate_with_context(
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    with context_fn():
+         ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 75, in op_execution_error_boundary
+    raise RetryRequestedFromPolicy(
+
+The above exception was caused by the following exception:
+Exception: Simulated transient failure on first attempt
+
+Stack Trace:
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 394, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 136, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 116, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/dagster/app/dagster_pipeline.py", line 35, in flaky_op
+    raise Exception("Simulated transient failure on first attempt")
+
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - STEP_RESTARTED - Started re-execution (attempt # 2) of step "flaky_op".
+2026-09-13 10:44:51 +0000 - dagster - INFO - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - flaky_op - flaky_op succeeded on retry 1
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - flaky_op - STEP_SUCCESS - Finished execution of step "flaky_op" in 1.99ms.
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - ENGINE_EVENT - Finished steps in process (pid: 8) in 6.91s
+2026-09-13 10:44:51 +0000 - dagster - DEBUG - customer_orders_job - ad5f7aaa-6550-421f-982c-435888923127 - 8 - RUN_SUCCESS - Finished execution of run for "customer_orders_job".
+
+Job result: SUCCESS

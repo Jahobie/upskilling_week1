@@ -1,0 +1,12 @@
+customer_orders:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_PG_HOST', 'localhost') }}"
+      port: 5432
+      user: dbt
+      pass: dbt
+      dbname: dbt
+      schema: public
+      threads: 4

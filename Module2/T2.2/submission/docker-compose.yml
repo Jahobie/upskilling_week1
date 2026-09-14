@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: dbt_warehouse
+    environment:
+      POSTGRES_USER: dbt
+      POSTGRES_PASSWORD: dbt
+      POSTGRES_DB: dbt
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbt -d dbt"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  dagster:
+    build:
+      context: .
+      dockerfile: Dockerfile.dagster
+    container_name: dbt_dagster
+    user: "1000:1000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DBT_PG_HOST: postgres
+      HOME: /tmp/dagster_home
+      DAGSTER_HOME: /tmp/dagster_home
+    volumes:
+      - ./:/opt/dagster/app
+    working_dir: /opt/dagster/app
+    command: >
+      bash -c "mkdir -p /tmp/dagster_home &&
+               python dagster_pipeline.py > orchestrator_log.txt 2>&1;
+               cat orchestrator_log.txt"
+
+volumes:
+  pgdata:

@@ -1,0 +1,50 @@
+1c1
+< {"store": 
+{
+"asset-2": {"seq": 3, "payload": "state-2-3"}, 
+"asset-7": {"seq": 3, "payload": "state-7-3"}, 
+"asset-3": {"seq": 2, "payload": "state-3-2"}, 
+"asset-1": {"seq": 2, "payload": "state-1-2"}, 
+"asset-4": {"seq": 2, "payload": "state-4-2"}, 
+"asset-5": {"seq": 1, "payload": "state-5-1"}, 
+"asset-8": {"seq": 1, "payload": "state-8-1"}, 
+"asset-6": {"seq": 1, "payload": "state-6-1"}}, 
+"rejects": [{"event_id": "E1003", "reason": "out_of_order"}, 
+{"event_id": "E1012", "reason": "out_of_order"}, 
+{"event_id": "E1016", "reason": "missing_field"}, 
+{"event_id": "E1003", "reason": "duplicate"}, 
+{"event_id": "E1017", "reason": "bad_type"}, 
+{"event_id": "E1000", "reason": "out_of_order"}, 
+{"event_id": "E1011", "reason": "out_of_order"}, 
+{"event_id": "E1018", "reason": "oversized_payload"}, 
+{"event_id": "E1002", "reason": "out_of_order"}, 
+{"event_id": "E1015", "reason": "out_of_order"}]}
+\ No newline at end of file
+---
+> {"store": 
+{
+"asset-2": {"seq": 3, "payload": "state-2-3"}, 
+"asset-7": {"seq": 3, "payload": "state-7-3"}, 
+"asset-3": {"seq": 2, "payload": "state-3-2"}, 
+"asset-1": {"seq": 2, "payload": "state-1-2"}, 
+"asset-4": {"seq": 2, "payload": "state-4-2"}, 
+"asset-5": {"seq": 1, "payload": "state-5-1"}, 
+"asset-8": {"seq": 1, "payload": "state-8-1"}, 
+"asset-6": {"seq": 1, "payload": "state-6-1"}}, 
+"rejects": [{"event_id": "E1003", "reason": "out_of_order"}, 
+{"event_id": "E1012", "reason": "out_of_order"}, 
+{"event_id": "E1016", "reason": "missing_field"}, 
+{"event_id": "E1003", "reason": "duplicate"}, 
+{"event_id": "E1017", "reason": "bad_type"}, 
+{"event_id": "E1000", "reason": "out_of_order"}, 
+{"event_id": "E1011", "reason": "out_of_order"}, 
+{"event_id": "E1018", "reason": "oversized_payload"}, 
+{"event_id": "E1002", "reason": "out_of_order"}, 
+{"event_id": "E1015", "reason": "out_of_order"}, 
+{"event_id": "E1004", "reason": "duplicate"}, 
+{"event_id": "E1013", "reason": "duplicate"}, 
+{"event_id": "E1003", "reason": "duplicate"}, 
+{"event_id": "E1012", "reason": "duplicate"}, 
+{"event_id": "E1005", "reason": "duplicate"}, 
+{"event_id": "E1016", "reason": "duplicate"}]}
+\ No newline at end of file

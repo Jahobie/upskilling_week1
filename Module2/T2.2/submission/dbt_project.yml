@@ -1,0 +1,20 @@
+name: "customer_orders"
+version: "1.0.0"
+config-version: 2
+
+profile: "customer_orders"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  customer_orders:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

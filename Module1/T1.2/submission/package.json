@@ -1,0 +1,27 @@
+{
+  "name": "submission2",
+  "version": "0.1.0",
+  "description": "TypeScript port of the messy-transactions integration",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx src/integration.ts",
+    "typecheck": "tsc --noEmit",
+    "pretest": "npm run typecheck",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "@vitest/coverage-v8": "^5.0.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
+}

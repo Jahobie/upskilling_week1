@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+run.log
+output.json
+*.tsbuildinfo

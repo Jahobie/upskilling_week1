@@ -1,0 +1,5 @@
+FROM python:3.12-slim
+
+RUN pip install --no-cache-dir dagster dagster-webserver "dbt-postgres>=1.8,<2.0"
+
+WORKDIR /opt/dagster/app

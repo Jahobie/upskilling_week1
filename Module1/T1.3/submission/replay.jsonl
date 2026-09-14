@@ -1,0 +1,26 @@
+{"event_id": "E1004", "entity_id": "asset-2", "seq": 3, "ts": "2025-05-01T00:44:00Z", "payload": "state-2-3"}
+{"event_id": "E1013", "entity_id": "asset-7", "seq": 3, "ts": "2025-05-01T00:53:00Z", "payload": "state-7-3"}
+{"event_id": "E1003", "entity_id": "asset-2", "seq": 2, "ts": "2025-05-01T00:43:00Z", "payload": "state-2-2"}
+{"event_id": "E1012", "entity_id": "asset-7", "seq": 2, "ts": "2025-05-01T00:52:00Z", "payload": "state-7-2"}
+{"event_id": "E1005", "entity_id": "asset-3", "seq": 1, "ts": "2025-05-01T00:45:00Z", "payload": "state-3-1"}
+{"event_id": "E1016", "seq": 1, "ts": "2025-05-01T00:56:00Z", "payload": "no-entity"}
+{"event_id": "E1001", "entity_id": "asset-1", "seq": 2, "ts": "2025-05-01T00:41:00Z", "payload": "state-1-2"}
+{"event_id": "E1003", "entity_id": "asset-2", "seq": 2, "ts": "2025-05-01T00:43:00Z", "payload": "state-2-2"}
+{"event_id": "E1007", "entity_id": "asset-4", "seq": 1, "ts": "2025-05-01T00:47:00Z", "payload": "state-4-1"}
+{"event_id": "E1017", "entity_id": "asset-10", "seq": "one", "ts": "2025-05-01T00:57:00Z", "payload": "bad-seq"}
+{"event_id": "E1006", "entity_id": "asset-3", "seq": 2, "ts": "2025-05-01T00:46:00Z", "payload": "state-3-2"}
+{"event_id": "E1000", "entity_id": "asset-1", "seq": 1, "ts": "2025-05-01T00:40:00Z", "payload": "state-1-1"}
+{"event_id": "E1011", "entity_id": "asset-7", "seq": 1, "ts": "2025-05-01T00:51:00Z", "payload": "state-7-1"}
+{"event_id": "E1009", "entity_id": "asset-5", "seq": 1, "ts": "2025-05-01T00:49:00Z", "payload": "state-5-1"}
+{"event_id": "E1008", "entity_id": "asset-4", "seq": 2, "ts": "2025-05-01T00:48:00Z", "payload": "state-4-2"}
+{"event_id": "E1018", "entity_id": "asset-11", "seq": 1, "ts": "2025-05-01T00:58:00Z", "payload": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}
+{"event_id": "E1002", "entity_id": "asset-2", "seq": 1, "ts": "2025-05-01T00:42:00Z", "payload": "state-2-1"}
+{"event_id": "E1014", "entity_id": "asset-8", "seq": 1, "ts": "2025-05-01T00:54:00Z", "payload": "state-8-1"}
+{"event_id": "E1015", "entity_id": "asset-1", "seq": 0, "ts": "2025-05-01T00:55:00Z", "payload": "stale-should-not-win"}
+{"event_id": "E1010", "entity_id": "asset-6", "seq": 1, "ts": "2025-05-01T00:50:00Z", "payload": "state-6-1"}
+{"event_id": "E1004", "entity_id": "asset-2", "seq": 3, "ts": "2025-05-01T00:44:00Z", "payload": "state-2-3"}
+{"event_id": "E1013", "entity_id": "asset-7", "seq": 3, "ts": "2025-05-01T00:53:00Z", "payload": "state-7-3"}
+{"event_id": "E1003", "entity_id": "asset-2", "seq": 2, "ts": "2025-05-01T00:43:00Z", "payload": "state-2-2"}
+{"event_id": "E1012", "entity_id": "asset-7", "seq": 2, "ts": "2025-05-01T00:52:00Z", "payload": "state-7-2"}
+{"event_id": "E1005", "entity_id": "asset-3", "seq": 1, "ts": "2025-05-01T00:45:00Z", "payload": "state-3-1"}
+{"event_id": "E1016", "seq": 1, "ts": "2025-05-01T00:56:00Z", "payload": "no-entity"}
